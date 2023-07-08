@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f7f7f7;
+}
+.navbar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+.bg-image-full {
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.bg-dark {
+    background-color: #222!important;
+}
+
+.mx-background-top-linear {
+    background: -webkit-linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
+    background: -webkit-linear-gradient(left, #54d400 48%, #1b1e21 48%);
+    background: linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
+}
+
+.btn {
+    background-color: #00ff00;  
+}
+
+.btn1 {
+    background-color: #00ff00;  
+}
+
+.bg-themecolor {
+    background-color: #00ff00;  
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #00ff00 !important;
+   
+    border-color: #00ff00 !important;
+}
+
+.nav-li {
+    color: #54d400;
+}
+
+.myfooter {
+    height: 60px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+.mycontainer {
+    min-height: 100vh !important; 
+}
+
+
+/* 
+  .footer {
+    position: absolute;
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* height: 60px; Set the fixed height of the footer here */
+    /* line-height: 60px; Vertically center the text there */
+  /* } */ 
