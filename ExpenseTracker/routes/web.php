@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ExpensesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ExpensesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,36 @@ Route::get('/create', [ExpensesController::class, 'create']);
 
 // Store Listing data
 Route::post('/expenses', [ExpensesController::class, 'store']);
+
+// Show listing data for a particular date
+Route::get('/expenses/show', [ExpensesController::class, 'showForDate']);
+
+
+// edit Expense
+Route::get('/expenses/{expense}/edit', [ExpensesController::class, 'edit']);
+
+// update Expense
+Route::put('/expenses/{expense}', [ExpensesController::class, 'update']);
+
+
+// Delete Expense
+Route::delete('/expenses/{expense}', [ExpensesController::class, 'destroy']);
+
+
+///////////==========DEALING WITH USERS==============////
+
+// Show registration form
+Route::get('/register', [UserController::class, 'create']);
+
+// Create New User
+Route::post('/users', [UserController::class, 'store']);
+
+// Log User Out
+Route::get('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+//Show Login Form
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+
+// Log In User
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+

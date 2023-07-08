@@ -27,7 +27,7 @@
                 
                 <nav class="navbar navbar-expand-lg navbar-dark mx-background-top-linear">
                 <div class="container">
-                    <a class="navbar-brand" href="index.html" style="text-transform: uppercase;"> EXPENSE TRACKER</a>
+                    <a class="navbar-brand" href="/" style="text-transform: uppercase;"> EXPENSE TRACKER</a>
                         
                 </div>
                 </nav>
@@ -38,12 +38,12 @@
                      
                      
                     <div class="">
-                      <form class="d-flex" role="search">
+                      <form action="/" method="GET" class="d-flex" role="search">
                         <div class="input-group ">
                                 <span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i></span>
 
-                                 <input type="text" placeholder="Search Expense" class="form-control " id="" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                         
+                                 <input type="text" placeholder="Search Expense" class="form-control" name="search" id="" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                                
                         </div>  
                         
                       <!-- <input class="form-control me-2" type="search" placeholder="Search Expense" aria-label="Search" >
@@ -63,14 +63,22 @@
                        
                           <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto mb-2 ms-4 mb-lg-0 float-end"></ul>
-                          <li>
+                         @auth
+                        <li>
                             <div class=" p-1">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="nav-li">WELCOME JOHN</span>
+                                <span class="nav-li mx-3">Welcome {{auth()->user()->name}}</span>
                                 
                             </div>
                           </li> 
-                          <li class="nav-item dropdown mx-4">
+                          <li>
+                            <div class=" p-1">
+                            
+                            <span class="mx-3"><a class="text-decoration-none nav-li" href="/logout" style="">LOG OUT</a></span>
+    
+                            </div>
+                        </li>
+                          {{-- <li class="nav-item dropdown mx-4">
                             <a class="nav-link dropdown-toggle nav-li" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               SORT BY MONTH
                             </a>
@@ -88,28 +96,29 @@
                               <li><a class="dropdown-item" href="/?month=November">November</a></li>
                               <li><a class="dropdown-item" href="/?month=December">December</a></li>
                             </ul>
-                          </li>
+                          </li> --}}
                           
                        
                        
                         
 
                         
-                     
+                     @else
                       <li>
                         <div class=" p-1">                      
                         
-                        <span class="mx-3"><a class="text-decoration-none nav-li" href="register.html" >REGISTER</a></span>                     
+                        <span class="mx-3"><a class="text-decoration-none nav-li" href="/register" >REGISTER</a></span>                     
 
                        </div>
                      </li>
                       <li>
                         <div class=" p-1">
                         
-                        <span class="mx-3"><a class="text-decoration-none nav-li" href="login.html" style="">LOG IN</a></span>
+                        <span class="mx-3"><a class="text-decoration-none nav-li" href="/login" style="">LOG IN</a></span>
 
                         </div>
                     </li>
+                  @endauth
                     <li>
                       <div class=" p-1">
                         

@@ -3,7 +3,8 @@
     <div class="container mycontainer mt-5 mb-5 position-relative" >
           
         <div class="row mt-5 mb-5">
-           
+
+       
             @unless (count($expenses)==0)
                 @foreach ($expenses as $expense)
                 <x-card :expense="$expense" />  

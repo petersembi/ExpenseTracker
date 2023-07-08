@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->date('date_of_creation');
             // $table->foreignId('user_id')->constrained();           
-            $table->string('author');
+            $table->string('author')->nullable();
             $table->string('item'); 
-            $table->string('category');           
+            $table->string('category')->nullable();          
             $table->string('quantity');
             
             $table->string('cost');
